@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CGPA Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>CGPA Calculator</h1>
+    <p class="subtitle">Add your subjects, pick grades, get your CGPA.</p>
+
+    <div class="table-head">
+      <span>Subject (optional)</span>
+      <span>Credits</span>
+      <span>Grade</span>
+      <span></span>
+    </div>
+
+    <div id="rows"></div>
+
+    <div class="actions">
+      <button id="addBtn" class="btn secondary">+ Add Subject</button>
+      <button id="calcBtn" class="btn primary">Calculate</button>
+      <button id="resetBtn" class="btn ghost">Reset</button>
+    </div>
+
+    <p id="error" class="error" hidden></p>
+
+    <section id="result" class="result" hidden>
+      <div>
+        <span class="label">CGPA</span>
+        <span id="cgpa" class="value">0.00</span>
+      </div>
+      <div>
+        <span class="label">Total Credits</span>
+        <span id="credits" class="value">0</span>
+      </div>
+      <div>
+        <span class="label">Approx. Percentage</span>
+        <span id="percent" class="value">0%</span>
+      </div>
+    </section>
+
+    <p class="note">Uses a 10-point scale (O=10, A+=9, A=8, B+=7, B=6, C=5, D=4, F=0). Percentage = CGPA × 9.5. Adjust the grade points in <code>script.js</code> to match your university.</p>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
